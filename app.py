@@ -1,5 +1,6 @@
 import streamlit as st
 from openai import OpenAI
+import os
 
 # Inicialize o cliente OpenAI com sua chave de API
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -56,3 +57,4 @@ if user_input:
                 break
     else:
         st.error(f"Erro: A execução falhou com status: {run.status}")
+
